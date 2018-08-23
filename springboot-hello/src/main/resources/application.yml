@@ -1,0 +1,4 @@
+#这个文件的配置公用的
+spring:
+  profiles:
+    active: prod
