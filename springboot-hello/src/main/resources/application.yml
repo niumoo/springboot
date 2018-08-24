@@ -1,4 +1,27 @@
-#����ļ������ù��õ�
+#这个文件的配置公用的
 spring:
   profiles:
     active: prod
+
+
+  # 编码配置
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+  #排除devtools因为静态资源改变而重启
+  devtools:
+    restart:
+      additional-exclude: static/**,public/**
+
+
+  #搜索得到的配置，解决返回对象报错问题https://www.zhihu.com/question/267864644/answer/330572239
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
