@@ -1,0 +1,44 @@
+#这个文件的配置公用的
+spring:
+  profiles:
+    active: prod
+
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=utf-8
+    username: root
+    password: 123
+
+  # JPA配置
+  jpa:
+    #显示SQL语句
+    show-sql: true
+    hibernate:
+      # 自动创建表，每次运行都会创建新表，如果已经存在则会首先删除
+    # ddl-auto: create
+    # 自动创建表，如果表已经存在表中有数据，则不会重建
+     ddl-auto: update
+
+
+  # 编码配置
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+  #排除devtools因为静态资源改变而重启
+  devtools:
+    restart:
+      additional-exclude: static/**,public/**
+
+
+  #搜索得到的配置，解决返回对象报错问题https://www.zhihu.com/question/267864644/answer/330572239
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
