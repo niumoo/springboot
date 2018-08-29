@@ -73,8 +73,6 @@ spring:
     cache-duration:
     encoding: UTF-8
 
-
-
 ##############S erver服务端的相关配置####################
 #  配置端口号以及访问路径
 server:
