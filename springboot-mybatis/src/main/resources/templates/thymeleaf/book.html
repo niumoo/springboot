@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thymeleaf 的基本使用</title>
+    <!-- 引入JS文件 -->
+    <!--<script th:src="@{/static/js/alert.js}"></script>-->
+</head>
+<body>
+
+<div>
+    <p><b>Hello Thymeleaf Index</b></p>
+
+    书籍名称：<input th:id="${book.name}" th:name="${book.name}" th:value="${book.name}">
+    <br/>
+    书籍作者：<input th:value="${book.author}">
+    <br/>
+    书籍价格：<input th:value="${book.price}">
+    <br/>
+    创建时间：<input th:value="${#dates.format(book.createTime,'yyyy-MM-dd hh:mm:ss ')}">
+</div>
+
+
+<div th:object="${book}">
+    <p><b>Hello Thymeleaf Index</b></p>
+
+    书籍名称：<input th:id="*{name}" th:name="*{name}" th:value="*{name}">
+    <br/>
+    书籍作者：<input th:value="*{author}">
+    <br/>
+    书籍价格：<input th:value="*{price}">
+    <br/>
+    创建时间：<input th:value="*{#dates.format(createTime,'yyyy-MM-dd hh:mm:ss')}">
+</div>
+
+<div>
+    <p><b>Text 与 utext</b></p>
+    <!-- th:text 显示HTML源码，作为字符串 -->
+    <span th:text="${book.description}">abc</span>
+    <br>
+    <span th:utext="${book.description}">abc</span>
+</div>
+
+<div>
+    <p><b>URL 的引用</b></p>
+    <a th:href="@{https://www.baidu.com}">网站网址</a>
+</div>
+
+<div>
+    <p><b>表单的使用</b></p>
+    <form th:action="@{/th/postform}" th:object="${book}" method="post">
+        <!-- th:field <input type="text" id="name" name="name" value="三国演义">  -->
+        书籍名称：<input type="text" th:field="*{name}">
+        <br/>
+        书籍作者：<input type="text" th:field="*{author}">
+        <br/>
+        书籍价格：<input type="text" th:field="*{price}">
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <p><b>判断的使用</b></p>
+    <div th:if="${book.price} == 10">10块钱还可以</div>
+    <div th:if="${book.price} gt 10">有点贵了</div>
+    <div th:if="${book.price} lt 10">好便宜的</div>
+    <div th:if="${book.price} ge 10">大于等于</div>
+    <div th:if="${book.price} le 10">小于等于</div>
+</div>
+
+<div>
+    <p><b>选择框</b></p>
+    <select>
+        <option>请选择一本书</option>
+        <option th:selected="${book.name eq '西游记'}">西游记</option>
+        <option th:selected="${book.name eq '红楼梦'}">红楼梦</option>
+        <option th:selected="${book.name eq '三国演义'}">三国演义</option>
+    </select>
+</div>
+
+<div>
+    <p><b>遍历功能</b></p>
+    <table>
+        <tr>
+            <th>书名</th>
+            <th>作者</th>
+            <th>售价</th>
+        </tr>
+        <tr th:each="bok:${bookList}">
+            <td th:text="${bok.name}"></td>
+            <td th:text="${bok.author}"></td>
+            <td th:text="${bok.price}"></td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <p><b>Switch功能</b></p>
+    <div th:switch="${book.name}">
+        <p th:case="'三国演义'">阴谋诡计</p>
+        <p th:case="#{books.red_chamber}">多愁善感</p>
+        <p th:case="'*'">其他书籍</p>
+    </div>
+    <p th:text="#{books.red_chamber}"></p>
+    <p th:utext="#{books.red_chamber}"></p>
+</div>
+
+
+
+</body>
+</html>
