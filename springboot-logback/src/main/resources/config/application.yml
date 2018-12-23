@@ -1,0 +1,39 @@
+### 服务启动端口号
+##server:
+##  port: 8080
+### 配置person属性值
+#person:
+#  last-name: Darcy
+#  age: 20
+#  birth: 2018/01/01
+#  email: gmail@gmail.com
+#  maps:
+#    key1:java
+#    key2:golang
+#  lists:
+#    - a
+#    - b
+#    - c
+#  dog:
+#    name: 旺财
+#    age: 2
+## 属性的占位符
+#bootapp:
+#  name: SpringBoot
+#  description: ${bootapp.name}是一个spring应用程序
+#server:
+#  port: 8083
+#  profiles:
+#    active: dev #指定环境为dev
+#    # 使用三个---进行文档块区分
+#
+#---
+#server:
+#  port: 8084
+#spring:
+#  profiles: dev
+#---
+#server:
+#  port: 8085
+#spring:
+#  profiles: prod
