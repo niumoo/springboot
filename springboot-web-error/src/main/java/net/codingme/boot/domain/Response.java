@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Collection;
+
 
 /**
  * <p>
@@ -29,6 +31,6 @@ public class Response<T> {
     /**
      * 响应数据
      */
-    private T data;
+    private Collection<T> data;
 
 }

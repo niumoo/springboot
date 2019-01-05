@@ -33,10 +33,24 @@ public class LogHandlerInterceptor implements HandlerInterceptor {
         return true;
     }
 
+    /**
+     * 返回modelAndView之前执行
+     * @param request
+     * @param response
+     * @param handler
+     * @param modelAndView
+     */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
     }
 
+    /**
+     * 执行Handler完成执行此方法
+     * @param request
+     * @param response
+     * @param handler
+     * @param ex
+     */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
     }
