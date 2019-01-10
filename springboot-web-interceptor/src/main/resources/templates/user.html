@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf 的基本使用</title>
+    <!-- 引入JS文件 -->
+    <!--<script th:src="@{/static/js/alert.js}"></script>-->
+</head>
+<body>
+
+<div>
+    <p><b>Hello Thymeleaf Index</b></p>
+    用户名称：<input th:id="${user.username}" th:name="${user.username}" th:value="${user.username}">
+    <br/>
+    用户技能：<input th:value="${user.skills}">
+    <br/>
+    用户年龄：<input th:value="${user.age}">
+    <br/>
+    用户生日：<input th:value="${#dates.format(user.birthday,'yyyy-MM-dd hh:mm:ss ')}">
+</div>
+
+
+<div th:object="${user}">
+    <p><b>Hello Thymeleaf Index</b></p>
+
+    用户名称：<input th:id="*{username}" th:name="*{username}" th:value="*{username}">
+    <br/>
+    用户技能：<input th:value="*{skills}">
+    <br/>
+    用户年龄：<input th:value="*{age}">
+    <br/>
+    用户生日：<input th:value="*{#dates.format(birthday,'yyyy-MM-dd hh:mm:ss')}">
+</div>
+
+<div>
+    <p><b>Text 与 utext</b></p>
+    <!-- th:text 显示HTML源码，作为字符串 -->
+    <span th:text="${user.username}">abc</span>
+    <br>
+    <span th:utext="${user.username}">abc</span>
+</div>
+
+<div>
+    <p><b>URL 的引用</b></p>
+    <a th:href="@{https://www.baidu.com}">网站网址</a>
+</div>
+
+<div>
+    <p><b>表单的使用</b></p>
+    <form th:action="@{/th/postform}" th:object="${user}" method="post">
+        用户名称：<input type="text" th:field="*{username}">
+        <br/>
+        用户技能：<input type="text" th:field="*{skills}">
+        <br/>
+        用户年龄：<input type="text" th:field="*{age}">
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <p><b>判断的使用</b></p>
+    <div th:if="${user.age} == 18">18岁了</div>
+    <div th:if="${user.age} gt 18">大于18岁</div>
+    <div th:if="${user.age} lt 18">小于18岁</div>
+    <div th:if="${user.age} ge 18">大于等于</div>
+    <div th:if="${user.age} le 18">小于等于</div>
+</div>
+
+<div>
+    <p><b>选择框</b></p>
+    <select>
+        <option>请选择一本书</option>
+        <option th:selected="${user.username eq 'admin'}">管理员</option>
+        <option th:selected="${user.username eq 'Darcy'}">Darcy</option>
+        <option th:selected="${user.username eq 'Chris'}">Chris</option>
+    </select>
+</div>
+
+<div>
+    <p><b>遍历功能</b></p>
+    <table>
+        <tr>
+            <th>用户名称</th>
+            <th>年龄</th>
+            <th>技能</th>
+        </tr>
+        <tr th:each="u:${userList}">
+            <td th:text="${u.username}"></td>
+            <td th:text="${u.age}"></td>
+            <td th:text="${u.skills}"></td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <p><b>Switch功能</b></p>
+    <div th:switch="${user.username}">
+        <p th:case="'admin'">欢迎管理员</p>
+    </div>
+</div>
+
+
+</body>
+</html>
