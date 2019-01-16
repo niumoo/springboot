@@ -97,6 +97,19 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!-- 引入druid数据源这里应该使用和springboot整合的jar。不然sql监控无效 -->
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>druid</artifactId>-->
+            <!--<version>1.1.12</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
