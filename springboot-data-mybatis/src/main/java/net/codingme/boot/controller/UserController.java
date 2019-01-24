@@ -69,7 +69,6 @@ public class UserController {
                           @ApiParam(value = "用户密码",required = true) String password) throws Exception {
         User login = userService.login(username,password);
         return ResponseUtill.success(login);
-
     }
 
 }

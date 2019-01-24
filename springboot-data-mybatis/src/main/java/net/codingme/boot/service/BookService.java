@@ -15,4 +15,6 @@ public interface BookService {
     List<Book> selectAll() throws Exception;
 
     Book selectByPrimaryKey(Integer id) throws Exception;
+
+    List<Book> selectByAuthor(String author)throws Exception;
 }

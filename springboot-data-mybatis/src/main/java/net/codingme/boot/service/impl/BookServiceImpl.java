@@ -16,6 +16,7 @@ import java.util.List;
  */
 @Service
 public class BookServiceImpl implements BookService {
+
     @Autowired
     private BookMapper bookMapper;
 
@@ -29,5 +30,10 @@ public class BookServiceImpl implements BookService {
     public Book selectByPrimaryKey(Integer id) throws Exception {
         Book book = bookMapper.selectByPrimaryKey(id);
         return book;
+    }
+
+    @Override
+    public List<Book> selectByAuthor(String author) throws Exception {
+        return bookMapper.selectByAuthor(author);
     }
 }

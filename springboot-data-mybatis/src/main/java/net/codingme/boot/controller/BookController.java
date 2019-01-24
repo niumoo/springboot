@@ -22,7 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/book")
-@Api(value = "Mybatis 书籍操作接口",tags = "Mybatis 书籍操作接口")
+@Api(value = "Mybatis 书籍操作接口", tags = "Mybatis 书籍操作接口")
 public class BookController {
 
     @Autowired
@@ -32,6 +32,13 @@ public class BookController {
     @ApiOperation(value = "查询所有书籍信息")
     public Response selectAll() throws Exception {
         List<Book> books = bookService.selectAll();
+        return ResponseUtill.success(books);
+    }
+
+    @GetMapping(value = "/author")
+    @ApiOperation(value = "根据作者查询书籍信息")
+    public Response selectByAuthor(String author) throws Exception {
+        List<Book> books = bookService.selectByAuthor(author);
         return ResponseUtill.success(books);
     }
 
