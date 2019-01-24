@@ -33,7 +33,7 @@ public class UserController {
     private UserService userService;
 
     @ApiOperation(value = "新增用户信息")
-    @PostMapping(value = "/user/create")
+    @PostMapping(value = "/user")
     @ResponseBody
     public Response create(@ApiParam @Valid User user, BindingResult bindingResult) throws Exception {
         if (bindingResult.hasErrors()) {
@@ -47,7 +47,7 @@ public class UserController {
     }
 
     @ResponseBody
-    @GetMapping(value = "/user/list")
+    @GetMapping(value = "/user")
     @ApiOperation(value = "获取用户列表")
     public Response findAll() throws Exception {
         List<User> userList = userService.findAll();

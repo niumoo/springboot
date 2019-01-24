@@ -9,9 +9,11 @@ import net.codingme.boot.utils.ResponseUtill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -21,23 +23,23 @@ import java.util.List;
  * @Date 2019/1/21 14:16
  */
 @RestController
-@RequestMapping("/book")
+@RequestMapping("/books")
 @Api(value = "Mybatis 书籍操作接口", tags = "Mybatis 书籍操作接口")
 public class BookController {
 
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = "/list")
+    @GetMapping(value = "")
     @ApiOperation(value = "查询所有书籍信息")
     public Response selectAll() throws Exception {
         List<Book> books = bookService.selectAll();
         return ResponseUtill.success(books);
     }
 
-    @GetMapping(value = "/author")
+    @GetMapping(value = "/author/{author}")
     @ApiOperation(value = "根据作者查询书籍信息")
-    public Response selectByAuthor(String author) throws Exception {
+    public Response selectByAuthor(@PathVariable("author") String author) throws Exception {
         List<Book> books = bookService.selectByAuthor(author);
         return ResponseUtill.success(books);
     }
