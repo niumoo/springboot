@@ -30,7 +30,7 @@ public class ResponseUtill {
     }
 
     public static Response error(String code, String message) {
-        return new Response(code, message, null);
+        return new Response(code, message, new ArrayList<>());
     }
 
     public static Response error(ResponseEnum responseEnum) {
