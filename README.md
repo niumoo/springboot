@@ -9,6 +9,8 @@
 
 [Spring Boot 日志系统](https://github.com/niumoo/springboot/tree/master/springboot-logback)
 
+[Spring Boot 动态 Banner](https://github.com/niumoo/springboot/tree/master/springboot-banner)
+
 
 ### Spring Boot Web开发
 [Spring Boot Web开发 - 静态资源](https://github.com/niumoo/springboot/tree/master/springboot-web-staticfile)
