@@ -43,6 +43,7 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
+        <!-- apo 切面支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -54,7 +55,6 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
         </dependency>
-
 
         <!-- Lombok 工具 -->
         <dependency>
@@ -97,19 +97,12 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- 引入druid数据源这里应该使用和springboot整合的jar。不然sql监控无效 -->
-        <!--<dependency>-->
-            <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>druid</artifactId>-->
-            <!--<version>1.1.12</version>-->
-        <!--</dependency>-->
+        <!-- 阿里 druid 数据源 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.10</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
