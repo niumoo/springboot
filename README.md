@@ -31,3 +31,5 @@
 [Spring Boot 连接数据库 - JPA](https://github.com/niumoo/springboot/tree/master/springboot-data-jpa)
 
 [Spring Boot 连接数据库 - Mybatis](https://github.com/niumoo/springboot/tree/master/springboot-data-mybatis)
+
+[Spring Boot 连接数据库 - Mybatis 插件](https://github.com/niumoo/springboot/tree/master/springboot-data-mybatis-page)
