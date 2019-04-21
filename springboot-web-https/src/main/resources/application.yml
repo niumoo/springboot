@@ -1,0 +1,10 @@
+# \u914D\u7F6E HTTPS \u76F8\u5173\u4FE1\u606F
+server:
+  port: 443
+  http-port: 80
+  ssl:
+    enabled: true
+    key-store: classpath:tomcat_https.keystore
+    key-password: 123456
+    key-store-type: JKS
+    key-alias: tomcat_https
