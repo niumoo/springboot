@@ -40,6 +40,10 @@
 [Spring Boot 相关整合 - 邮件服务](https://github.com/niumoo/springboot/tree/master/springboot-mail)
 
 
+## Spring Boot 分析
+
+[Spring Boot 相关分析 - 自定义 starter ](https://github.com/niumoo/springboot/tree/master/springboot-starter)
+
 
 # 交流
 ![](https://raw.githubusercontent.com/niumoo/files/master/images/web/wechat.jpg)  
