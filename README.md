@@ -46,5 +46,5 @@
 
 
 # 交流
-![](https://raw.githubusercontent.com/niumoo/files/master/images/web/wechat.jpg)  
-🐟 欢迎关注公众号，欢迎⭐Star️，欢迎 Fork !
+![](https://user-gold-cdn.xitu.io/2019/10/25/16e00bef676251ce?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)  
+🐟 欢迎关注公众号：未读代码(weidudaima)，一起成长，欢迎⭐Star️，欢迎 Fork !
