@@ -12,7 +12,7 @@ import java.util.Date;
  * 时间转换器
  *
  * @Author niujinpeng
- * @Date 2019/1/11 15:18
+ * @Date 2019/11/19 23:17
  */
 public class ConverterDate implements Converter<String, Date> {
 

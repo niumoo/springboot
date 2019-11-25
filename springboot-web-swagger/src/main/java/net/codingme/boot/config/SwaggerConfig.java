@@ -7,15 +7,15 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.ObjectMapperConfigurer;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * <p>
+ * Springfox-swagger2 配置
  *
  * @Author niujinpeng
- * @Date 2019/1/11 17:44
+ * @Date 2019/11/19 23:17
  */
 @Configuration
 @EnableSwagger2
@@ -31,13 +31,12 @@ public class SwaggerConfig {
                 .build();
     }
 
-
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot 使用 Swagger2构建RESTFul APIs")
-                .description("springboot swagger2 test...")
+                .title("未读代码 API")
+                .description("公众号：未读代码(weidudaima) springboot-swagger2 在线借口文档")
                 .termsOfServiceUrl("https://www.codingme.net")
-                .contact("niumoo")
+                .contact("达西呀")
                 .version("1.0")
                 .build();
     }

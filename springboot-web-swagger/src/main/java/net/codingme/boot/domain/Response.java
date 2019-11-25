@@ -1,5 +1,7 @@
 package net.codingme.boot.domain;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,25 +14,28 @@ import java.util.Collection;
  * 响应实体类封装
  *
  * @Author niujinpeng
- * @Date 2018/12/19 17:13
+ * @Date 2019/11/19 23:17
  */
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Response<T> {
+@ApiModel(value = "响应信息")
+public class Response {
     /**
      * 响应码
      */
+    @ApiModelProperty(value = "响应码")
     private String code;
     /**
      * 响应信息
      */
+    @ApiModelProperty(value = "响应信息")
     private String message;
 
     /**
      * 响应数据
      */
-    private Collection<T> data;
-
+    @ApiModelProperty(value = "响应数据")
+    private Collection content;
 }

@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Spring Boot 启动类
  * </p>
  */
-
 @SpringBootApplication
 public class BootApplication {
 
