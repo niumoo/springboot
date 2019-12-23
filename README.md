@@ -44,6 +44,8 @@
 
 [Spring Boot 相关分析 - 自定义 starter ](https://github.com/niumoo/springboot/tree/master/springboot-starter)
 
+[Spring Boot 应用监控 - Spring Boot Admin ](https://github.com/niumoo/springboot/tree/master/springboot-admin)
+
 
 # 交流
 ![](https://user-images.githubusercontent.com/26371673/69558482-46eab080-0fe3-11ea-8fa7-d9d824b7bed4.jpg)  
