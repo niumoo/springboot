@@ -1,6 +1,6 @@
 # Spring Boot 学习案例
 
-> 注意：本 Spring Boot 系列文章基于 Spring Boot 版本 **v2.x **进行学习分析，版本不同可能会有细微差别。
+> 注意：本 Spring Boot 系列文章基于 Spring Boot 版本 v2.x 进行学习分析，版本不同可能会有细微差别。
 
 所有项目示例都有对应的文章介绍，可以直接点击 [https://www.wdbyte.com](https://www.wdbyte.com/categories/Springboot/) 阅读。
 
