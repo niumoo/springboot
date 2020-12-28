@@ -43,6 +43,8 @@
 
 [Spring Boot 连接数据库 - Mybatis 插件](https://github.com/niumoo/springboot/tree/master/springboot-data-mybatis-page)
 
+[Spring Boot 连接数据库 - 多数据源配置](https://github.com/niumoo/springboot/tree/master/springboot-data-mybatis-multiple-datasource)
+
 ## Spring Boot 相关整合
 
 [Spring Boot 相关整合 - 邮件服务](https://github.com/niumoo/springboot/tree/master/springboot-mail) 📧
